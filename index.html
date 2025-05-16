@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayso – The world’s quieter without you</title>
+  <style>
+    :root {
+      --yellow: #FFC93C;
+      --purple: #7D5BA6;
+      --coral: #FF6F61;
+      --blue: #3399FF;
+      --green: #6FCF97;
+      --pink: #FF6F91;
+      --offwhite: #F9F7F7;
+      --darkgray: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--offwhite);
+      color: var(--darkgray);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--purple);
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: -4px;
+      left: 0;
+      background: var(--coral);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .scrolling-banner {
+      background-color: var(--pink);
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 1px solid #ffc1d4;
+      border-bottom: 1px solid #ffc1d4;
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      padding: 0.6rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      animation: scroll-left 25s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--purple);
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(125, 91, 166, 0.2);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: var(--darkgray);
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--darkgray);
+      padding: 0.6rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 10px rgba(255, 201, 60, 0.6);
+    }
+
+    .btn-primary:hover {
+      background: var(--coral);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--purple);
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 1.8rem;
+      flex: 1 1 280px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    footer {
+      background: var(--purple);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--yellow);
+      margin: 0 0.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SAYso.</div>
+    <nav>
+      <a href="#over">Over</a>
+      <a href="#merch">Merch</a>
+      <a href="#visie">Visie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="scrolling-banner">
+    <div class="scrolling-text">
+      One question away from a good story • The world is nicer when we talk • Open for small talk (and big dreams) • Just SAYso • Ask me where I am going • Let's interrupt the scroll • 
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>SAYso. The world’s quieter without you.</h1>
+    <p>Kleine signalen. Echte gesprekken. Ontmoet nieuwe mensen, waar je ook bent. Just SAYso</p>
+    <button class="btn-primary">Bekijk de merch</button>
+  </section>
+
+  <section id="over">
+    <h2>Wat is SAYso?</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <p>Een brand die je draagt om te laten zien dat je
+ openstaat voor een gesprek.</p>
+      </div>
+      <div class="card">
+        <p>Voor wie meer verbinding zoekt — zonder dat het awkward hoeft te zijn.</p>
+      </div>
+      <div class="card">
+        <p>Kleine hints, grote ontmoetingen. Soms is één vraag genoeg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visie">
+    <h2>Missie & Visie</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center; font-size: 1.1rem; line-height: 1.6;">
+      Onze campagne en merchandise stimuleren jongvolwassenen om contact te leggen met vreemden in openbare settings.  
+      We verlagen barrières, creëren bewustzijn, verhogen zelfvertrouwen en bieden een luchtige manier om het gesprek te starten.  
+      Want de wereld is echt leuker als we praten.
+    </p>
+  </section>
+
+  <section id="merch">
+    <h2>Onze Merch</h2>
+    <div class="feature-grid">
+      <div class="card"><p>Stickers met teksten als “Ask me where I’m going”</p></div>
+      <div class="card"><p>Telefoonhoesjes, tote bags, buttons</p></div>
+      <div class="card"><p>Elke aankoop ondersteunt ook onze campagne</p></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact ons via <a href="mailto:hallo@sayso.nl">hallo@sayso.nl</a></p>
+    <p>© Sayso 2025</p>
+  </footer>
+
+</body>
+</html>
